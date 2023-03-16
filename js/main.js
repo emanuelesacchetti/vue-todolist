@@ -30,6 +30,14 @@ createApp({
                     done: false  
                     }
         this.taskList.push(nuovaTask)
+      },
+      fatto(){
+        console.log(this.taskList.done)
+        if(this.taskList.done == false){
+            this.taskList.done = true;
+        }else if(this.taskList.done == true){
+            this.taskList.done = false
+        }
       }
     }
 }).mount('#app')
