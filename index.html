@@ -24,19 +24,10 @@
             </div>
             <div class="main_bottom">
                 <ul>
-                    <li>
-                        <span>task 1</span>
+                    <li v-for="(task, index) in taskList">
+                        <span :class="(task.done == true)?'text-line-tr':'' ">{{task.text}}</span>
                         <i class="fa-solid fa-xmark"></i>
-                    </li>
-                    <li>
-                        <span>task 2</span>
-                        <i class="fa-solid fa-xmark"></i>
-                    </li>
-                    <li>
-                        <span>task 3</span>
-                        <i class="fa-solid fa-xmark"></i>
-                    </li>
-                    
+                    </li>                    
                 </ul>
             </div>
         </main>
