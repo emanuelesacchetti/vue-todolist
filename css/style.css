@@ -67,3 +67,6 @@ main {
 .main_bottom li i {
     padding-right: 10px;
 }
+.errore {
+    color: red;
+}

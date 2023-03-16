@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
             return {
+                error: true,
                 newTask: '',
                 taskList: [
                     {
@@ -28,8 +29,9 @@ createApp({
         nuovaTask = {
                     text: element,
                     done: false  
-                    }
-        this.taskList.push(nuovaTask)
+                    };
+        this.taskList.push(nuovaTask);
+        this.newTask = '';
       },
       fatto(indice){
         this.taskList[indice].done = !this.taskList[indice].done

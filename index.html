@@ -22,6 +22,7 @@
             <div class="main_top text-center">
                 <input type="text" placeholder="Inserisci qui il tuo nuovo task" v-model="newTask" @keyup.enter="addTask(newTask)">
                 <button class="add_task" @click="addTask(newTask)">Aggiungi</button>
+                <div v-show="(newTask.length > 5)? error = false : error = true" class="errore">Inserisci una nuova Task di almeno 5 caratteri</div>
             </div>
 
             <div class="main_bottom">
