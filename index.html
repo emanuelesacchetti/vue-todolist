@@ -23,12 +23,14 @@
                 <button class="add_task">Aggiungi</button>
             </div>
             <div class="main_bottom">
-                <ul>
+                <h3 v-if="taskList == 0" class="text-center">Non hai task!</h3>
+                <ul v-else>
                     <li v-for="(task, index) in taskList">
                         <span :class="(task.done == true)?'text-line-tr':'' ">{{task.text}}</span>
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
                     </li>                    
                 </ul>
+                
             </div>
         </main>
 
