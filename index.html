@@ -28,7 +28,7 @@
                 <h3 v-if="taskList == 0" class="text-center">Non hai task!</h3>
                 <ul v-else>
                     <li v-for="(task, index) in taskList">
-                        <span :class="(task.done == true)?'text-line-tr':'' " @click="fatto()">{{task.text}}</span>
+                        <span :class="(task.done == true)?'text-line-tr':'' " @click="fatto(index)">{{task.text}}</span>
                         <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
                     </li>                    
                 </ul>
