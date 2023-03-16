@@ -18,10 +18,12 @@
         </header>
 
         <main class="container">
+
             <div class="main_top text-center">
-                <input type="text" placeholder="Inserisci qui il tuo nuovo task">
-                <button class="add_task">Aggiungi</button>
+                <input type="text" placeholder="Inserisci qui il tuo nuovo task" v-model="newTask" @keyup.enter="addTask(newTask)">
+                <button class="add_task" @click="addTask(newTask)">Aggiungi</button>
             </div>
+
             <div class="main_bottom">
                 <h3 v-if="taskList == 0" class="text-center">Non hai task!</h3>
                 <ul v-else>
